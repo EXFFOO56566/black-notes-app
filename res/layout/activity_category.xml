@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blackDark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btnClose" android:layout_width="52.0dip" android:layout_height="52.0dip" android:onClick="btnClick">
+            <ImageView android:id="@id/imgClose" android:layout_width="@dimen/btnBackBottomArrowSize" android:layout_height="@dimen/btnBackBottomArrowSize" android:src="@drawable/btn_down_green" android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="20.0dip" android:textColor="@color/green" android:id="@id/txtCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:textViewStyle="medium" />
+        <LinearLayout android:gravity="end|center" android:id="@id/btnEdit" android:layout_width="wrap_content" android:layout_height="52.0dip" android:onClick="btnClick" android:layout_alignParentEnd="true">
+            <ImageView android:id="@id/imgEdit" android:visibility="visible" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/btn_note_edit" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="14.0dip" android:textColor="@color/green" android:id="@id/txtComplete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" android:layout_marginEnd="12.0dip" app:textViewStyle="medium" />
+        </LinearLayout>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:orientation="vertical" android:id="@id/btnAllNotes" android:layout_width="fill_parent" android:layout_height="50.0dip" android:onClick="btnClick">
+                <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="16.0dip" android:textColor="@color/mainItemTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/allNote" android:layout_centerVertical="true" android:layout_marginStart="15.0dip" />
+            </RelativeLayout>
+            <RelativeLayout android:orientation="vertical" android:id="@id/btnUncategorizedNotes" android:layout_width="fill_parent" android:layout_height="50.0dip" android:onClick="btnClick">
+                <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="16.0dip" android:textColor="@color/mainItemTitle" android:id="@id/txtUnCategorizedNotes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unCategorizedNotes" android:layout_centerVertical="true" android:layout_marginStart="15.0dip" />
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/btnAddCategory" android:background="@color/blackDarkBar" android:layout_width="fill_parent" android:layout_height="48.0dip" android:onClick="btnClick">
+        <ImageView android:id="@id/imgAddCategory" android:visibility="visible" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/img_add_checkbox_green" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout" android:background="@color/blackTranslucent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="btnClick" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="185.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/btnBackUp" android:background="@color/blackDark" android:layout_width="fill_parent" android:layout_height="50.0dip" android:onClick="btnClick">
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_width="27.0dip" android:layout_height="27.0dip" android:src="@drawable/btn_drive_back_up" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="14.0dip" android:textColor="@color/green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Backup" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/blackDarkBar" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/btnRestore" android:background="@color/blackDark" android:layout_width="fill_parent" android:layout_height="50.0dip" android:onClick="btnClick">
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <ImageView android:layout_width="27.0dip" android:layout_height="27.0dip" android:src="@drawable/btn_drive_restore" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="14.0dip" android:textColor="@color/green" android:gravity="center" android:id="@id/download" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Restore" android:textDirection="locale" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

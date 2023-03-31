@@ -1,0 +1,12 @@
+package b.b.a.b.a;
+
+public enum a {
+    NO_HARDWARE,
+    HARDWARE_UNAVAILABLE,
+    NO_FINGERPRINTS_REGISTERED,
+    SENSOR_FAILED,
+    LOCKED_OUT,
+    TIMEOUT,
+    AUTHENTICATION_FAILED,
+    UNKNOWN
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout" android:background="@color/blackMain" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imgCheckbox" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ring" android:layout_centerVertical="true" android:layout_marginStart="15.0dip" />
+    <LinearLayout android:gravity="center" android:id="@id/btnEditCheckbox" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+        <ImageView android:id="@id/imgEditCircle" android:layout_width="1.6999817dip" android:layout_height="1.6999817dip" android:layout_margin="10.0dip" android:src="@drawable/shape_circle_edit_checkbox" />
+    </LinearLayout>
+    <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="16.0dip" android:textColor="@color/white" android:ellipsize="end" android:id="@id/txtContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerVertical="true" android:textDirection="locale" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/btnEditCheckbox" android:layout_toEndOf="@id/imgCheckbox" />
+</RelativeLayout>

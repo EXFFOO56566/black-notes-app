@@ -1,0 +1,42 @@
+package a.m;
+
+public final class j {
+    public static final int action_container = 2131230770;
+    public static final int action_divider = 2131230772;
+    public static final int action_image = 2131230773;
+    public static final int action_text = 2131230779;
+    public static final int actions = 2131230780;
+    public static final int async = 2131230790;
+    public static final int blocking = 2131230793;
+    public static final int chronometer = 2131230864;
+    public static final int forever = 2131230912;
+    public static final int ghost_view = 2131230913;
+    public static final int ghost_view_holder = 2131230914;
+    public static final int icon = 2131230919;
+    public static final int icon_group = 2131230920;
+    public static final int info = 2131230957;
+    public static final int italic = 2131230958;
+    public static final int line1 = 2131230966;
+    public static final int line3 = 2131230967;
+    public static final int normal = 2131231007;
+    public static final int notification_background = 2131231009;
+    public static final int notification_main_column = 2131231010;
+    public static final int notification_main_column_container = 2131231011;
+    public static final int parent_matrix = 2131231017;
+    public static final int right_icon = 2131231026;
+    public static final int right_side = 2131231027;
+    public static final int save_non_transition_alpha = 2131231030;
+    public static final int save_overlay_view = 2131231031;
+    public static final int tag_transition_group = 2131231084;
+    public static final int tag_unhandled_key_event_manager = 2131231085;
+    public static final int tag_unhandled_key_listeners = 2131231086;
+    public static final int text = 2131231089;
+    public static final int text2 = 2131231090;
+    public static final int time = 2131231100;
+    public static final int title = 2131231101;
+    public static final int transition_current_scene = 2131231107;
+    public static final int transition_layout_save = 2131231108;
+    public static final int transition_position = 2131231109;
+    public static final int transition_scene_layoutid_cache = 2131231110;
+    public static final int transition_transform = 2131231111;
+}

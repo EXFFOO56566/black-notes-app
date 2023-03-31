@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blackDark" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="btnClick"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/blackDarkBar" android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btnClose" android:layout_width="37.0dip" android:layout_height="52.0dip" android:onClick="btnClick">
+            <ImageView android:layout_width="@dimen/btnBackArrowSize" android:layout_height="@dimen/btnBackArrowSize" android:src="@drawable/btn_back" android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+        <notepad.note.notas.notes.notizen.ui.MyEditTextView android:textSize="16.0dip" android:textColor="@color/white" android:textColorHint="@color/grayHint" android:id="@id/editSearch" android:background="@color/transParent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/search" android:maxLines="1" android:layout_weight="1.0" android:inputType="textCapSentences" android:textDirection="locale" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+        <LinearLayout android:gravity="center" android:id="@id/btnRemoveText" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="fill_parent" android:onClick="btnClick">
+            <ImageView android:layout_width="13.0dip" android:layout_height="13.0dip" android:src="@drawable/btn_edit_close_x" />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

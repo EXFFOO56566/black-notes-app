@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout" android:background="@color/blackTranslucent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="btnClick" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/blackMain" android:layout_width="300.0dip" android:layout_height="120.0dip" android:layout_centerInParent="true" android:onClick="btnClick">
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="14.0dip" android:textColor="@color/white" android:id="@id/txtTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/askDeleteNote" android:layout_marginStart="25.0dip" />
+        <LinearLayout android:id="@id/btnDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:onClick="btnClick" android:layout_alignParentEnd="true">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="13.0dip" android:textColor="@color/green" android:id="@id/txtDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="20.0dip" android:text="@string/delete" android:layout_marginStart="10.0dip" android:layout_marginEnd="18.0dip" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/btnCancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:onClick="btnClick" android:layout_toStartOf="@id/btnDelete">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="13.0dip" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="20.0dip" android:text="@string/cancel" android:layout_marginStart="15.0dip" android:layout_marginEnd="10.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

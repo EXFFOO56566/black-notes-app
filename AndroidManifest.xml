@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="notepad.note.notas.notes.notizen" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/rounded_app_icon" android:label="@string/blackNote" android:roundIcon="@mipmap/app_icon" android:supportsRtl="true" android:theme="@style/Theme.AppCompat.Translucent">
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@string/adsAppId"/>
+        <receiver android:label="BlackNote" android:name="notepad.note.notas.notes.notizen.widget.oneByOne.WidgetOneByOne">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_note_one_one"/>
+        </receiver>
+        <activity android:clearTaskOnLaunch="true" android:launchMode="singleInstance" android:name="notepad.note.notas.notes.notizen.main.SplashActivity" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="notepad.note.notas.notes.notizen.main.MainActivity" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.category.CategoryActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.category.AddCategoryActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.view.NoteSearchActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.category.EditCategoryActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.AddNoteActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="notepad.note.notas.notes.notizen.note.view.NoteActivity" android:theme="@style/Theme.AppCompat.Translucent.gray" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.edit.EditNoteActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.view.DeleteNoteActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.category.selectCategory.SelectCategoryActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.setting.SettingActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.main.SortActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.util.RateAppActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.main.search.SearchActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.view.SelectNoteMoreActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.password.RegisterPasswordActivity" android:theme="@style/Theme.AppCompat.Translucent.white" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.password.ConfirmPasswordActivity" android:theme="@style/Theme.AppCompat.Translucent.white" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.password.RemovePasswordActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.more.NoteInformationActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.edit.DialogChangedNoteActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.note.SelectNoteActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.checklist.AddChecklistActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.checklist.ConfirmPasswordChecklistActivity" android:theme="@style/Theme.AppCompat.Translucent.white" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.checklist.ChecklistActivity" android:theme="@style/Theme.AppCompat.Translucent.black" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.checklist.AddCheckboxActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.checklist.EditCheckboxActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.checklist.EditChecklistTitleActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.checklist.SelectCheckboxActivity"/>
+        <activity android:name="notepad.note.notas.notes.notizen.checklist.guide.GuideActivity" android:theme="@style/Theme.AppCompat.Translucent.black" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.setting.OpenSourceLicenseActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.main.dailyCheck.DailyCheckActivity" android:theme="@style/Theme.AppCompat.Translucent.black"/>
+        <activity android:name="notepad.note.notas.notes.notizen.main.dailyCheck.AddDailyCheckboxActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.main.dailyCheck.EditDailyCheckboxActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="notepad.note.notas.notes.notizen.setting.BackUpRestoreActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.widget.oneByOne.setting.NoteSettingActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.widget.oneByOne.WidgetNoteActivity" android:theme="@style/AppTheme.Widget" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.widget.oneByOne.WidgetChecklistActivity" android:theme="@style/AppTheme.Widget" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.widget.oneByOne.selectColor.SelectColorActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="notepad.note.notas.notes.notizen.widget.oneByOne.WidgetSearchActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <provider android:authorities="notepad.note.notas.notes.notizen.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

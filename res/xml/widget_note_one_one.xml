@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:minWidth="40.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/layout_widget_note_one_by_one" android:configure="notepad.note.notas.notes.notizen.widget.oneByOne.setting.NoteSettingActivity" android:previewImage="@drawable/widget_preview_one_by_one"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

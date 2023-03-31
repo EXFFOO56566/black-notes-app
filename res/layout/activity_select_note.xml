@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/layout" android:background="@color/blackTranslucent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="btnClick" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/blackDark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:id="@id/btnNote" android:layout_width="200.0dip" android:layout_height="wrap_content" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="15.0dip" android:textColor="@color/green" android:gravity="center" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/note" app:textViewStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/btnChecklist" android:layout_width="200.0dip" android:layout_height="wrap_content" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="15.0dip" android:textColor="@color/green" android:gravity="center" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/checklist" app:textViewStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

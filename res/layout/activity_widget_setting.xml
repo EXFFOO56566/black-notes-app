@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/blackTranslucent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/blackMain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layoutDirection="ltr">
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="16.0dip" android:textColor="@color/noteTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="Note Setting" app:textViewStyle="medium" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+        <LinearLayout android:gravity="center" android:id="@id/btnSelectNote" android:layout_width="fill_parent" android:layout_height="60.0dip" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="14.0dip" android:textColor="@color/noteTitle" android:ellipsize="end" android:gravity="center" android:id="@id/txtSelectedNoteTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select a note" android:maxLines="2" android:textDirection="locale" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/btnComplete" android:background="@color/blackBar" android:layout_width="fill_parent" android:layout_height="40.0dip" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="14.0dip" android:textColor="@color/green" android:id="@id/completeSetting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Complete" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

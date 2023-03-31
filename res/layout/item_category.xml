@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="16.0dip" android:textColor="@color/mainItemTitle" android:ellipsize="end" android:id="@id/categoryName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerVertical="true" android:textDirection="locale" android:layout_marginStart="15.0dip" android:layout_marginEnd="5.0dip" android:layout_toStartOf="@id/editLayout" android:layout_alignParentStart="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/editLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+        <LinearLayout android:id="@id/btnDelete" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/btn_delete_category" android:layout_marginStart="11.0dip" android:layout_marginEnd="11.0dip" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/btnEditCategoryName" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/btn_note_edit" android:layout_marginStart="11.0dip" android:layout_marginEnd="9.0dip" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/btnEditRank" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="19.0dip" android:layout_height="19.0dip" android:src="@drawable/btn_edit_rank" android:layout_marginStart="9.0dip" android:layout_marginEnd="11.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

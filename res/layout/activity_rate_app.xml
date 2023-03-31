@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/layout" android:background="@color/blackTranslucent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="btnClick"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:background="@color/blackMain" android:layout_width="250.0dip" android:layout_height="120.0dip" android:layout_centerInParent="true" android:onClick="btnClick" android:layoutDirection="ltr">
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="18.0dip" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="Enjoying BlackNote?" android:layout_centerHorizontal="true" app:textViewStyle="bold" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="22.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <LinearLayout android:orientation="horizontal" android:id="@id/btnClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="btnClick">
+                <ImageView android:id="@id/star1" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="6.0dip" android:src="@drawable/btn_main_favorites_green" />
+                <ImageView android:id="@id/star2" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="6.0dip" android:src="@drawable/btn_main_favorites_green" />
+                <ImageView android:id="@id/star3" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="6.0dip" android:src="@drawable/btn_main_favorites_green" />
+                <ImageView android:id="@id/star4" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="6.0dip" android:src="@drawable/btn_main_favorites_green" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/btnRate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="btnClick">
+                <ImageView android:id="@id/star5" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="6.0dip" android:src="@drawable/btn_main_favorites_green" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

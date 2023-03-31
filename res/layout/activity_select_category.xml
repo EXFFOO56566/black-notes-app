@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/mainLayout" android:background="@color/blackMain" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btnClose" android:layout_width="52.0dip" android:layout_height="52.0dip" android:onClick="btnClick">
+            <ImageView android:layout_width="@dimen/btnBackBottomArrowSize" android:layout_height="@dimen/btnBackBottomArrowSize" android:src="@drawable/btn_down_green" android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="20.0dip" android:textColor="@color/green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:textDirection="locale" app:textViewStyle="medium" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <RelativeLayout android:id="@id/btnAddCategory" android:background="@color/blackBar" android:layout_width="fill_parent" android:layout_height="48.0dip" android:onClick="btnClick">
+        <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/img_add_checkbox_green" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

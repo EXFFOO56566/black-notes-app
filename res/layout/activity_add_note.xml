@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blackMain" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btnClose" android:layout_width="37.0dip" android:layout_height="52.0dip" android:onClick="btnClick">
+            <ImageView android:layout_width="@dimen/btnBackArrowSize" android:layout_height="@dimen/btnBackArrowSize" android:src="@drawable/btn_back" android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+        <notepad.note.notas.notes.notizen.ui.MyEditTextView android:textSize="@dimen/noteTitle" android:textColor="@color/noteTitle" android:textColorHint="@color/grayHint" android:id="@id/editTitle" android:background="@color/transParent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/title" android:maxLines="1" android:layout_weight="1.0" android:inputType="textCapSentences" android:textDirection="locale" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+        <LinearLayout android:gravity="center" android:id="@id/btnChangeTextColor" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+            <ImageView android:layout_width="14.0dip" android:layout_height="14.0dip" android:src="@drawable/btn_change_text_color_gray" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/btnChangeTextSize" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick" android:layout_marginEnd="5.0dip">
+            <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/btn_change_text_size_gray" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:id="@id/scroll_edit" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <notepad.note.notas.notes.notizen.ui.MyEditTextView android:textSize="@dimen/noteContent" android:textColor="@color/noteContent" android:textColorHint="@color/grayHint" android:gravity="start|center|top" android:id="@id/editContent" android:background="@color/transParent" android:paddingTop="3.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/content" android:inputType="textCapSentences|textMultiLine" android:textDirection="locale" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+    </ScrollView>
+    <LinearLayout android:gravity="center" android:id="@id/btnAdd" android:background="@color/blackBar" android:layout_width="fill_parent" android:layout_height="@dimen/noteBottomHeight" android:onClick="btnClick">
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="18.0dip" android:textColor="@color/green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" app:textViewStyle="medium" />
+    </LinearLayout>
+</LinearLayout>

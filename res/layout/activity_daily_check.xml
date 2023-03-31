@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blackDark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btnClose" android:layout_width="52.0dip" android:layout_height="52.0dip" android:onClick="btnClick">
+            <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/btnBackBottomArrowSize" android:src="@drawable/btn_down_green" android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="20.0dip" android:textColor="@color/green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Check" android:layout_centerInParent="true" app:textViewStyle="medium" />
+        <LinearLayout android:gravity="center" android:id="@id/btnGuide" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick" android:layout_alignParentEnd="true">
+            <ImageView android:layout_width="18.0dip" android:layout_height="wrap_content" android:src="@drawable/btn_guide" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/adsLayout" android:layout_width="fill_parent" android:layout_height="@dimen/bannerAdsHeight">
+        <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:adSize="BANNER" app:adUnitId="@string/adsDailyCheck" />
+        <ImageView android:id="@id/imgAdsLoading" android:layout_width="fill_parent" android:layout_height="40.0dip" android:src="@drawable/img_ad_loading_note" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="52.0dip">
+        <LinearLayout android:gravity="center" android:id="@id/btnTodo" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="17.0dip" android:textColor="@color/white" android:id="@id/txtTodo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To-Do(0)" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/btnShopping" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="17.0dip" android:textColor="@color/noteContent" android:id="@id/txtShopping" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shopping(5)" />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:background="@color/blackDarkBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/btnAddCheckbox" android:layout_width="fill_parent" android:layout_height="48.0dip" android:onClick="btnClick">
+            <ImageView android:visibility="visible" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/img_add_checkbox_green" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

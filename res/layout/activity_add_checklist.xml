@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout" android:background="@color/blackTranslucent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="btnClick"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/blackDark" android:layout_width="270.0dip" android:layout_height="160.0dip" android:layout_centerInParent="true" android:onClick="btnClick">
+        <notepad.note.notas.notes.notizen.ui.MyEditTextView android:textColor="@color/mainItemTitle" android:textColorHint="@color/grayHint" android:id="@id/editText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:hint="@string/title" android:maxLines="1" android:inputType="textCapSentences" android:textDirection="locale" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/btnAdd" android:background="@color/blackDarkBar" android:layout_width="fill_parent" android:layout_height="@dimen/btnAddCheckboxHeight" android:layout_alignParentBottom="true" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="18.0dip" android:textColor="@color/green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" app:textViewStyle="medium" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

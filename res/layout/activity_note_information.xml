@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout" android:background="@color/blackTranslucent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="btnClick" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/blackMain" android:layout_width="300.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true" android:onClick="btnClick">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="15.0dip" android:textColor="@color/green" android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/dateCreated" android:layout_weight="1.0" app:textViewStyle="bold" />
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textColor="@color/white" android:gravity="center" android:id="@id/txtCreatedDate" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="15.0dip" android:textColor="@color/green" android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/dateModified" android:layout_weight="1.0" app:textViewStyle="bold" />
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textColor="@color/white" android:gravity="center" android:id="@id/txtModifiedDate" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="15.0dip" android:textColor="@color/green" android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Text length" android:layout_weight="1.0" app:textViewStyle="bold" />
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textColor="@color/white" android:gravity="center" android:id="@id/txtTextLength" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

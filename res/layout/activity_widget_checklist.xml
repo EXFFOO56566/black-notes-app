@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blackMain" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btnClose" android:layout_width="52.0dip" android:layout_height="52.0dip" android:onClick="btnClick">
+            <ImageView android:id="@id/imgClose" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/btn_edit_close_x" android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+            <LinearLayout android:gravity="center" android:id="@id/btnDelete" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:id="@id/imgDelete" android:layout_width="19.0dip" android:layout_height="19.0dip" android:src="@drawable/btn_note_delete" android:layout_marginStart="9.0dip" android:layout_marginEnd="9.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnEdit" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:id="@id/imgEdit" android:visibility="visible" android:layout_width="19.0dip" android:layout_height="19.0dip" android:src="@drawable/btn_note_edit" android:layout_marginStart="9.0dip" android:layout_marginEnd="9.0dip" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/btnChangeColor" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick" android:layout_marginEnd="6.0dip">
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/imgColorBox" android:background="@color/green" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginStart="9.0dip" android:layout_marginEnd="9.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/adsLayout" android:layout_width="fill_parent" android:layout_height="@dimen/bannerAdsHeight">
+        <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:adSize="BANNER" app:adUnitId="@string/adsChecklist" />
+        <ImageView android:id="@id/imgAdsLoading" android:layout_width="fill_parent" android:layout_height="40.0dip" android:src="@drawable/img_ad_loading_note" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="10.0dip">
+        <LinearLayout android:id="@id/btnCategory" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick" android:layout_marginStart="15.0dip">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="13.0dip" android:textColor="@color/green" android:ellipsize="end" android:id="@id/txtCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category" android:maxLines="1" android:textDirection="locale" />
+        </LinearLayout>
+    </RelativeLayout>
+    <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="@dimen/noteTitle" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/txtTitle" android:background="@color/transParent" android:layout_width="fill_parent" android:layout_height="52.0dip" android:maxLines="1" android:textDirection="locale" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" app:textViewStyle="bold" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/btnAddCheckbox" android:background="@color/blackBar" android:layout_width="fill_parent" android:layout_height="48.0dip" android:onClick="btnClick">
+        <ImageView android:id="@id/imgPlus" android:visibility="visible" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/img_add_checkbox_green" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

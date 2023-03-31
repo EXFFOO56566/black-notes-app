@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blackMain" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/topBarHeight">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btnClose" android:layout_width="52.0dip" android:layout_height="52.0dip" android:onClick="btnClick">
+            <ImageView android:layout_width="11.0dip" android:layout_height="@dimen/btnBackArrowSize" android:src="@drawable/btn_back" android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+            <LinearLayout android:gravity="center" android:id="@id/btnChangeTextColor" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:layout_width="15.5dip" android:layout_height="15.5dip" android:src="@drawable/btn_change_text_color_gray" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnChangeTextSize" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:layout_width="22.0dip" android:layout_height="18.0dip" android:src="@drawable/btn_change_text_size" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.5dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnSearch" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:layout_width="19.0dip" android:layout_height="19.0dip" android:src="@drawable/btn_note_search" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnLock" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:id="@id/imgLock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_note_lock" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnDelete" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:layout_width="wrap_content" android:layout_height="19.0dip" android:src="@drawable/btn_note_delete" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnEdit" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:layout_width="19.0dip" android:layout_height="wrap_content" android:src="@drawable/btn_note_edit" android:layout_marginStart="9.0dip" android:layout_marginEnd="8.5dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnBookmark" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:id="@id/imgBookmark" android:layout_width="19.0dip" android:layout_height="wrap_content" android:src="@drawable/btn_note_favorite" android:layout_marginStart="8.0dip" android:layout_marginEnd="14.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/adsLayout" android:layout_width="fill_parent" android:layout_height="@dimen/bannerAdsHeight">
+        <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:adSize="BANNER" app:adUnitId="@string/adsBanner" />
+        <ImageView android:id="@id/imgAdsLoading" android:layout_width="fill_parent" android:layout_height="40.0dip" android:src="@drawable/img_ad_loading_note" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="10.0dip">
+        <LinearLayout android:id="@id/btnCategory" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="13.0dip" android:textColor="@color/green" android:ellipsize="end" android:id="@id/txtCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category" android:maxLines="1" android:textDirection="locale" />
+        </LinearLayout>
+    </RelativeLayout>
+    <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="@dimen/noteTitle" android:textColor="@color/noteTitle" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/txtTitle" android:layout_width="fill_parent" android:layout_height="52.0dip" android:maxLines="1" android:textDirection="locale" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" app:textViewStyle="bold" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:id="@id/scroll_edit" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="@dimen/noteContent" android:textColor="@color/noteContent" android:gravity="start|center|top" android:autoLink="web" android:id="@id/txtContent" android:paddingTop="3.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" android:textDirection="locale" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+        </ScrollView>
+        <LinearLayout android:id="@id/btnMore" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:onClick="btnClick" android:layout_alignParentEnd="true">
+            <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:src="@drawable/btn_more_green" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

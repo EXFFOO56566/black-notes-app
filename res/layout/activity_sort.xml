@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/layout" android:background="@color/blackTranslucent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="btnClick" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/blackDark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:orientation="vertical" android:id="@id/btnTitle" android:layout_width="200.0dip" android:layout_height="wrap_content" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="15.299988dip" android:textColor="@color/green" android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/sortHeight" android:text="@string/title" android:textDirection="locale" />
+            <ImageView android:id="@id/imgCheckedTitle" android:visibility="gone" android:layout_width="3.0dip" android:layout_height="3.0dip" android:layout_margin="10.0dip" android:src="@drawable/shape_circle_green" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/btnCreatedTime" android:layout_width="200.0dip" android:layout_height="wrap_content" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="15.299988dip" android:textColor="@color/green" android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/sortHeight" android:text="@string/dateCreated" android:textDirection="locale" />
+            <ImageView android:id="@id/imgCheckedCreatedTime" android:visibility="gone" android:layout_width="3.0dip" android:layout_height="3.0dip" android:layout_margin="10.0dip" android:src="@drawable/shape_circle_green" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/btnEditedTime" android:layout_width="200.0dip" android:layout_height="wrap_content" android:onClick="btnClick">
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="15.299988dip" android:textColor="@color/green" android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/sortHeight" android:text="@string/dateModified" android:textDirection="locale" />
+            <ImageView android:id="@id/imgCheckedEditedTime" android:visibility="gone" android:layout_width="3.0dip" android:layout_height="3.0dip" android:layout_margin="10.0dip" android:src="@drawable/shape_circle_green" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="50.0dip" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imgColor" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/shape_circle_blue" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/imgChecked" android:visibility="gone" android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/btn_checked" android:layout_centerInParent="true" />
+</RelativeLayout>

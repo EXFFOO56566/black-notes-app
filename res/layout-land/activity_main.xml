@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/blackDark" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="44.0dip">
+            <LinearLayout android:gravity="center_vertical" android:id="@id/btnSort" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/btn_sort" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+            </LinearLayout>
+            <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="19.0dip" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@id/txtCategoryName" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/blackNote" android:maxLines="1" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" app:textViewStyle="medium" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/btnMore" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+                <ImageView android:layout_width="wrap_content" android:layout_height="14.0dip" android:src="@drawable/btn_more" android:layout_marginStart="18.0dip" android:layout_marginEnd="18.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/bottomBarLayout" android:background="@color/blackDarkBar" android:layout_width="fill_parent" android:layout_height="44.0dip" android:baselineAligned="false">
+            <LinearLayout android:gravity="center" android:id="@id/btnCategory" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="btnClick">
+                <ImageView android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/btn_category" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnSearch" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="btnClick">
+                <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/btn_search" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnAddNote" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="btnClick">
+                <ImageView android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/btn_add_note" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnFavorite" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="btnClick">
+                <ImageView android:id="@id/imgFavorite" android:layout_width="19.0dip" android:layout_height="19.0dip" android:src="@drawable/btn_favorites" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@id/btnDailyCheck" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="btnClick">
+                <ImageView android:layout_width="21.0dip" android:layout_height="21.0dip" android:src="@drawable/btn_daily_check" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/mainEditLayout" android:background="@color/blackDark" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/btnEditBack" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick">
+            <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/btn_back_white" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/btnDeleteSelectedNotes" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick" android:layout_marginEnd="4.0dip" android:layout_alignParentEnd="true">
+            <ImageView android:layout_width="19.0dip" android:layout_height="19.0dip" android:src="@drawable/btn_delete_white" android:layout_marginStart="11.0dip" android:layout_marginEnd="11.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/btnChangeCategory" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="fill_parent" android:onClick="btnClick" android:layout_toStartOf="@id/btnDeleteSelectedNotes">
+            <ImageView android:layout_width="19.0dip" android:layout_height="19.0dip" android:layout_marginTop="1.0dip" android:src="@drawable/btn_change_category" android:layout_marginStart="11.0dip" android:layout_marginEnd="11.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView android:id="@id/imgEmptyNote" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginBottom="50.0dip" android:src="@drawable/img_empty_note" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

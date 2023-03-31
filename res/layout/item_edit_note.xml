@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="170.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/shape_rounded_rectangle_black" android:layout_width="140.0dip" android:layout_height="140.0dip" android:layout_centerInParent="true">
+        <ImageView android:id="@id/imgEditCheck" android:padding="10.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/ring" />
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="10.0dip" android:textColor="@color/noteContent" android:ellipsize="end" android:gravity="end" android:id="@id/txtCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:maxLines="1" android:textDirection="locale" android:layout_marginEnd="10.0dip" android:layout_toEndOf="@id/imgEditCheck" android:layout_alignParentEnd="true" />
+        <notepad.note.notas.notes.notizen.ui.MyTextView android:textSize="16.0dip" android:textColor="@color/mainItemTitle" android:gravity="center" android:id="@id/txtTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="27.0dip" android:layout_marginBottom="27.0dip" android:layout_centerInParent="true" android:textDirection="locale" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" app:textViewStyle="medium" />
+        <ImageView android:id="@id/imgChecklist" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_margin="10.0dip" android:src="@drawable/checklist" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+        <ImageView android:id="@id/imgPassword" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_margin="10.0dip" android:src="@drawable/btn_note_lock_exist_password" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>
